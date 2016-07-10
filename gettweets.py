@@ -12,10 +12,6 @@ consumer_key = os.environ.get('GET_TWEETS_CONSUMER_KEY')
 consumer_secret = os.environ.get('GET_TWEETS_CONSUMER_SECRET')
 access_key = os.environ.get('GET_TWEETS_ACCESS_KEY')
 access_secret = os.environ.get('GET_TWEETS_ACCESS_SECRET')
-print consumer_key
-print consumer_secret
-print access_key
-print access_secret
 
 
 def get_all_tweets(screen_name):
