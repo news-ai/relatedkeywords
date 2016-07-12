@@ -20,7 +20,7 @@ html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 # print soup.find_all(match_class(['basic-info-description'])).find_all('p').text
 print soup.find(class_='basic-info-description').find('p').text
-driver.quit()
 driver.close()
+driver.quit()
 
 
