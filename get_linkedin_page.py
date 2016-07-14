@@ -2,6 +2,7 @@ import os
 import urllib2
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from __future__ import print_function
 
 def match_class(target):                                                        
     def do_match(tag):                                                          
@@ -19,7 +20,7 @@ soup = BeautifulSoup(html, 'html.parser')
 # print soup.find_all(match_class(['basic-info-description'])).find_all('p').text
 
 # get only company information
-print soup.find(class_='basic-info-description').find('p').text
+print(soup.find(class_='basic-info-description').find('p').text)
 driver.close()
 driver.quit()
 
