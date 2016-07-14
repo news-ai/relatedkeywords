@@ -1,8 +1,5 @@
 import os
-import requests
 import urllib2
-import re
-import string
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
@@ -14,11 +11,14 @@ def match_class(target):
 
 url = 'https://www.linkedin.com/company/enigma-technologies-inc-'
 
+# start driver to retrieve HTML of company page
 driver = webdriver.Chrome()
 driver.get(url)
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 # print soup.find_all(match_class(['basic-info-description'])).find_all('p').text
+
+# get only company information
 print soup.find(class_='basic-info-description').find('p').text
 driver.close()
 driver.quit()
